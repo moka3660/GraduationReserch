@@ -8,6 +8,8 @@
 <body>
   thanks
 <?php
+try
+{
   $dsn = 'mysql:dbname=phpkiso;host=localhost';
   $user = 'root';
   $password = '';
@@ -32,6 +34,11 @@
   $stmt->execute();
 
   $dbh = null;
+}
+catch(Exception $e)
+{
+  print '現在障害が発生しています。ご迷惑をおかけしております。';
+}
  ?>
 </body>
 </html>
